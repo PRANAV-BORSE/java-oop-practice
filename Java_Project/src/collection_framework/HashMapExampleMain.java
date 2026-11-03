@@ -1,5 +1,7 @@
 package collection_framework;
 
+import java.util.Collection;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
@@ -24,6 +26,20 @@ public class HashMapExampleMain {
 		//OBTAINING A SET OF ENTRIES
 		Set<Map.Entry<Long, String>> setOfEntries = contacts.entrySet();
 		
+		for(Map.Entry<Long, String> everyEntry : setOfEntries) {
+			Long everyKey = everyEntry.getKey();
+			String everyValue = everyEntry.getValue();
+			System.out.println("Key :" + everyKey + ", Value :" + everyValue);
+		}
+		
+		
+		System.out.println("=====================================");
+
+		//OBTAINING LIST OF VALUES
+		Collection<String> allValues =  contacts.values();
+		for(String everyValue : allValues) {
+			System.out.println("Value: " + everyValue);
+		}	
 	}
 
 }
