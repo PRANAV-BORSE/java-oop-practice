@@ -17,10 +17,13 @@ public class HashMapExampleMain {
 		
 		for(long everyKey : allKeys) {
 			String everyValue = contacts.get(everyKey);
-			
-		System.out.println("Key is "+ everyKey + "value is " + everyValue);
+			System.out.println("Key is "+ everyKey + "value is " + everyValue);
 		}
-
+		System.out.println("=====================================");
+		
+		//OBTAINING A SET OF ENTRIES
+		Set<Map.Entry<Long, String>> setOfEntries = contacts.entrySet();
+		
 	}
 
 }
