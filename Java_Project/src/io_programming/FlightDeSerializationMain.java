@@ -15,6 +15,8 @@ public class FlightDeSerializationMain {
 			){
 			Object obj = in.readObject();
 			System.out.println(obj);
+			Flight f1 = (Flight)obj;   //DOWN CASTING
+			System.out.println(f1.getAirLine());
 		}
 		catch(Exception ex) {
 			ex.printStackTrace();

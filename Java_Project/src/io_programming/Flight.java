@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public class Flight implements Serializable {
 	
-	private String flightNo;
+	private String flightNo; //NON-STATIC , NO SERIALIZATIOn // transient = provides serialization
 	private String airLine;
 	private String sourse;
 	private String destination;
@@ -12,7 +12,7 @@ public class Flight implements Serializable {
 	public Flight() {
 		// TODO Auto-generated constructor stub
 	}
-
+	
 	public Flight(String flightNo, String airLine, String sourse, String destination) {
 		super();
 		this.flightNo = flightNo;
