@@ -22,6 +22,10 @@ public static void main(String[] args) {
 	Predicate<Integer> evenPr = num -> num % 2 == 0;
 	Stream<Integer> evenNumStream = numStream.filter(evenPr);
 	evenNumStream.forEach(nm -> System.out.println(nm));
+	
+	System.out.println("===============");
+	
+//	allNumbers.Stream().filter(num % 2 == 0).forEach(num -> System.out.println(num);
 }
 
 }
