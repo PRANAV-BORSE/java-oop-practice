@@ -1,5 +1,6 @@
 package example.listner;
 
+import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletContextEvent;
 import jakarta.servlet.ServletContextListener;
 import jakarta.servlet.annotation.WebListener;
@@ -23,6 +24,12 @@ public class WebAppListner implements ServletContextListener {
      */
     public void contextInitialized(ServletContextEvent sce)  { 
          System.out.println("Application is staring up...");
+         //OBTAINING A HANDLE TO THE APPLICATION SPECIFIC OBJECT  I.E . SERVLETCONTEXT
+         ServletContext appContext = sce.getServletContext();
+         //BINDING SOME DATA AT APPLICATION LEVEL
+         appContext.setAttribute("ourSlogan", "Change is the way of life");
+         
+         
     }
 
 	/**
